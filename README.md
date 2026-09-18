@@ -22,8 +22,12 @@ Type checks also run on GitHub Actions for every push and pull request.
 - [ ] modules: `import` / `export`, default vs named — `src/types/todo.ts`
 
 ## What I learned
+A union of literal types rejects any value other than the specified ones.
 
-<!-- 2-3 lines per topic, in your own words -->
+Since TypeScript uses structural typing, assignment is possible if the shapes are identical, even if the type names differ.
+
+A union can only be defined with `type`, not `interface`.
+If you define a type with the same name twice, `interface`s are merged, whereas `type`s result in a duplicate definition error.
 
 ## Resources
 
