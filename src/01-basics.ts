@@ -6,3 +6,4 @@
 // 2. 同じ形の型を interface と type の両方で書いてみる
 // 3. types/todo.ts のステータス型 (リテラル型の union) を import し、
 //    決められた値以外の文字列を代入するとどうなるか確かめる
+import type { TodoStatus } from "./types/todo.ts";
