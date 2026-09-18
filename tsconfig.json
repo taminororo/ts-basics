@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    // 型チェックの厳しさを最大にする (noImplicitAny, strictNullChecks などをまとめて有効化)
+    "strict": true,
+
+    // どのバージョンの JavaScript を前提にするか
+    "target": "ES2022",
+
+    // import / export の解釈を Node.js の ES Modules に合わせる
+    "module": "NodeNext",
+
+    // 型だけの import は `import type` と明示させる (Node が型を消して実行できるように)
+    "verbatimModuleSyntax": true,
+
+    // `import ... from './types/todo.ts'` のように .ts 拡張子付きで import できるようにする
+    "allowImportingTsExtensions": true,
+
+    // JS ファイルを出力しない (型チェック専用)
+    "noEmit": true,
+
+    // Node.js の型 (console, process など) を読み込む
+    "types": ["node"],
+
+    // node_modules 内の型定義ファイルはチェックしない (速くするため)
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
