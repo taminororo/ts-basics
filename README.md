@@ -29,6 +29,16 @@ Since TypeScript uses structural typing, assignment is possible if the shapes ar
 A union can only be defined with `type`, not `interface`.
 If you define a type with the same name twice, `interface`s are merged, whereas `type`s result in a duplicate definition error.
 
+Alternative syntaxes for the exact same type; knowing how to read both is enough.
+
+`await` unwraps the inner value from the container. At the type level: `Promise<number>` -> `number`.
+
+Even when the outer container is identical, types are not assignable inner type inside `< >` differs.
+
+T is resolved on each function call. Accurately typing the return value requires caller to handle type narrowing.
+
+If the type cannot be inferred from arguments, the caller must supply it explicitly.
+
 ## Resources
 
 - TypeScript Handbook — https://www.typescriptlang.org/docs/handbook/
