@@ -9,6 +9,10 @@
 //    (type guard。fetch した res.json() の結果を安全に扱うための道具)
 //
 
+// any は型チェックをすり抜ける。unknown は確かめるまで何もできない
+// typeof で調べた if の中だけ、値をその型として扱える（narrowing）
+// type guard の構文を使うと、その値をその型として扱わせられる（チェックの仕方を誤ると判定も間違う）
+
 import type { TodoStatus, Todo } from "./types/todo.ts"
 
 // 実行: node src/03-unknown-narrowing.ts
